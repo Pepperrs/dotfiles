@@ -2,8 +2,9 @@
   export ZSH=/home/pepper/.oh-my-zsh
   export TERM="xterm-256color"
 # Set Browser variable
-  export BROWSER=chromium
-# Set name of the theme to load.
+  export BROWSER=/usr/bin/google-chrome-stable
+  export EDITOR=/usr/bin/gvim
+  # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
@@ -63,6 +64,8 @@ plugins=(git rails sudo tmux zsh-syntax-highlighting)
 # User configuration
   PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
   #PATH+= "$PATH:/usr/lib/jvm/java-8-openjdk/bin"
+#  PATH=~/anaconda3/bin:$PATH
+  PATH="$PATH:/opt/anaconda/bin:/usr/bin:/bin:/usr/sbin:/sbin" 
   export PATH
   export IS_HEROKU_SERVER="0"
 
