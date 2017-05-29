@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
   export ZSH=/home/pepper/.oh-my-zsh
+#  export TERM="screen-256color"
   export TERM="xterm-256color"
 # Set Browser variable
   export BROWSER=/usr/bin/google-chrome-stable
