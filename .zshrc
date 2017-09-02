@@ -17,7 +17,7 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 #POWERLEVEL9K_MODE='compatible'
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-
+source ~/.fonts/*.sh
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -109,3 +109,4 @@ export NVM_DIR="/home/pepper/.nvm"
 
 # added by travis gem
 [ -f /home/pepper/.travis/travis.sh ] && source /home/pepper/.travis/travis.sh
+source /opt/ros/lunar/setup.zsh
