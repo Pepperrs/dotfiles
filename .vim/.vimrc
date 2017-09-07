@@ -43,6 +43,13 @@ Plugin 'tpope/vim-rails'
 " Plugin 'altercation/vim-colors-solarized'
 Plugin 'micha/vim-colors-solarized'
 
+" cmake for c++ projects
+Plugin 'vhdirk/vim-cmake'
+
+" Autocompletion
+Plugin 'valloric/youcompleteme'
+
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -93,3 +100,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "open Nerdtree with Ctrl-N
 map <C-n> :NERDTreeToggle<CR>
 inoremap jk <esc>
+
+map <F6> <ESC>:CMake<CR> 
+map <F7> <ESC>:make<CR> 
