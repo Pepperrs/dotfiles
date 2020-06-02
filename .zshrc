@@ -1,23 +1,22 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/pepper/.oh-my-zsh
+  export ZSH=/Users/pepper/.oh-my-zsh
 #  export TERM="screen-256color"
   export TERM="xterm-256color"
 # Set Browser variable
-  export BROWSER=/usr/bin/google-chrome-stable
-  export EDITOR=/usr/bin/gvim
+  # export BROWSER=/usr/bin/google-chrome-stable
+  export EDITOR=atom
   # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-POWERLEVEL9K_MODE='awesome-fontconfig'
+#POWERLEVEL9K_MODE='awesome-fontconfig'
 #POWERLEVEL9K_MODE='awesome-patched'
 #POWERLEVEL9K_MODE='comatible'
-#POWERLEVEL9K_MODE='flat'
+POWERLEVEL9K_MODE='nerdfont-complete'
 #POWERLEVEL9K_MODE='compatible'
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-source ~/.fonts/*.sh
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -61,14 +60,21 @@ source ~/.fonts/*.sh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails sudo tmux zsh-syntax-highlighting)
+plugins=(
+
+git
+rails
+sudo
+tmux
+zsh-syntax-highlighting
+sudo
+
+)
+
 # User configuration
-  PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-  #PATH+= "$PATH:/usr/lib/jvm/java-8-openjdk/bin"
-#  PATH=~/anaconda3/bin:$PATH
-  PATH="$PATH:/opt/anaconda/bin:/usr/bin:/bin:/usr/sbin:/sbin" 
-  export PATH
-  export IS_HEROKU_SERVER="0"
+export PATH=$HOME/bin:/usr/local/bin::/usr/local:$PATH
+# export PATH=$HOME/anaconda2/bin:$PATH
+export PATH
 
 #  export PATH="$PATH:/home/pepper/.rvm/bin:/home/pepper/.rvm/gems/ruby-2.2.1/bin:/home/pepper/.rvm/gems/ruby-2.2.1@global/bin:/home/pepper/.rvm/rubies/ruby-2.2.1/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/pepper/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -106,7 +112,3 @@ bindkey "${terminfo[kend]}" end-of-line
 
 export NVM_DIR="/home/pepper/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# added by travis gem
-[ -f /home/pepper/.travis/travis.sh ] && source /home/pepper/.travis/travis.sh
-source /opt/ros/lunar/setup.zsh
